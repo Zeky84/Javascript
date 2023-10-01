@@ -9,7 +9,7 @@ public class CorsConfiguration {//import org.springframework.context.annotation.
 
 @Configuration
 @EnableWebMvc
-public class CorsConfigTest implements WebMvcConfigurer {
+public static class CorsConfigTest implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {

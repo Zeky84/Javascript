@@ -3,6 +3,21 @@ var registerBtn = document.querySelector("#registerBtn");
 
 var usernameTextBox = document.querySelector("#username");
 var passwordTextBox = document.querySelector("#password");
+var eyeIcons = document.querySelectorAll(".fa-eye");
+
+eyeIcons.forEach(function (eyeIcon) {
+        eyeIcon.addEventListener("click", function () {
+          if (eyeIcon.classList.contains("fa-eye")) {
+            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.add("fa-eye-slash");
+            passwordTextBox.setAttribute("type", "text");
+          } else {
+            eyeIcon.classList.remove("fa-eye-slash");
+            eyeIcon.classList.add("fa-eye");
+            passwordTextBox.setAttribute("type", "password");
+          }
+        });
+      });
 
 submitBtn.addEventListener("click", () => { // same like inline function but with equivalent of lambda expression
   if (usernameTextBox.value == "" && passwordTextBox.value == "") {

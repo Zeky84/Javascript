@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Login</title>
+    <script src="https://kit.fontawesome.com/17e9292b04.js"crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
 </div>
 <div>
     <label for="password">Password:</label>
-    <input type="text" th:field="${user.password}" id="password"/>
+    <input type="password" th:field="${user.password}" id="password"/><i class="fa-solid fa-eye" id="passwordEye"></i>
 </div>
 <div>
     <button type="button" id="submitBtn">Submit if already user</button>
