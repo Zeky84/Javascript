@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login</title>
+</head>
+
+<body>
+<h1>Login Page</h1>
+<div>
+    <label for="username"> Username: </label>
+    <input type="text" th:field="${user.username}" id="username"/><!-- the id declaration is to be use by js DOM to apply properties to this element-->
+</div>
+<div>
+    <label for="password">Password:</label>
+    <input type="text" th:field="${user.password}" id="password"/>
+</div>
+<div>
+    <button type="button" id="submitBtn">Submit if already user</button>
+</div>
+<div>
+    <button type="button" id="registerBtn">Register if new user</button>
+</div>
+
+<script type="text/javascript" src="../static/loginpract.js"></script>
+
+</body>
+</html>
